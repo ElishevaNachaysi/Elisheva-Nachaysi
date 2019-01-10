@@ -1,0 +1,21 @@
+<div  [ngClass]="{'userUnComplete':!user.isComplete, 'user':user.isComplete}" >
+  <a routerLink="/dataUser/{{user.id}}"  (click)='getData()' >ID: {{user.id}} </a>
+  <br/>
+    <app-user-basic [user]="user"></app-user-basic>
+ 
+    <br/>
+    <div class="container">
+        <div class='row'>
+          <div class='col-sm-6'>
+          <button mat-stroked-button  (mouseover)='showOtherData=true' (click)='showOtherData=false'>Other Data</button>
+        
+        </div>
+        <div>  <app-user-more-details *ngIf='showOtherData' [user]="user" ></app-user-more-details> </div>
+          <div class='col-sm-6'>
+          <button mat-stroked-button (click)='updateUser()'>Update</button>
+          <button mat-stroked-button (click)='deleteUser()'>Delete</button>
+        </div>
+        </div>
+        </div>
+    
+  </div>

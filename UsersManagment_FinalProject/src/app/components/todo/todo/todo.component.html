@@ -1,0 +1,6 @@
+<div class='todo'>
+  <strong>Title:</strong> {{todo.title}}
+  <br/>
+  <strong>Completed:</strong> {{todo.completed}}
+  <button *ngIf='!todo.completed' mat-stroked-button (click)='updateCompleted()'>Mark Completed</button>
+</div>

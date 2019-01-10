@@ -1,0 +1,9 @@
+
+Search :<input (keyup)='filterUsers(filter.value)' #filter />
+<br/>
+ <div *ngFor="let user of users"  >
+     <div   class='user' [style.background-color]='currentUserId==user.id?"#ffb3b3":"white"'>
+  <app-user [user]="user" (chooseUser)='setBoldUser($event)' ></app-user>
+</div>
+</div> 
+ 

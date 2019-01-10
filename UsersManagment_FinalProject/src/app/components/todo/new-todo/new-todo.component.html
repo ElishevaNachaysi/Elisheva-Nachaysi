@@ -1,0 +1,8 @@
+<div>
+  <strong>Title:  </strong> <mat-form-field hintLabel="Max 50 characters">
+    <input matInput #input maxlength="50" [(ngModel)]="todo.title" placeholder="Enter Title">
+    <mat-hint align="end">{{input.value?.length || 0}}/50</mat-hint>
+  </mat-form-field>
+
+  <app-buttons-add (add)='addTodo()'  (cancel)='cancel()'></app-buttons-add>
+</div>

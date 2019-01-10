@@ -1,0 +1,12 @@
+<div>
+  <strong>Title:  </strong> <mat-form-field hintLabel="Max 50 characters">
+    <input matInput #title maxlength="50" [(ngModel)]="post.title" placeholder="Enter Title">
+    <mat-hint align="end">{{title.value?.length || 0}}/50</mat-hint>
+  </mat-form-field>
+  <br/>
+ <strong> Body: </strong>  <mat-form-field hintLabel="Max 250 characters">
+    <input matInput #body maxlength="50" [(ngModel)]="post.body" placeholder="Enter Body">
+    <mat-hint align="end">{{body.value?.length || 0}}/250</mat-hint>
+  </mat-form-field>
+  <app-buttons-add (add)='addPost()'  (cancel)='cancel()' ></app-buttons-add>
+</div>

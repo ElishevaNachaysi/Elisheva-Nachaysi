@@ -1,0 +1,4 @@
+
+  <a mat-stroked-button routerLink="/dataUser/{{userId}}" (click)='isNew=(!isNew)'>New Todo</a>
+<app-todos-list *ngIf='!isNew'></app-todos-list>
+<app-new-todo *ngIf='isNew'  (afterAdd)='isNew=false' ></app-new-todo>
